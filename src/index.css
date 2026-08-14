@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #08090a;
+  --color-void-soft: #101113;
+  --color-void-lift: #18191c;
+  --color-paper: #f3efe6;
+  --color-muted: #9c9890;
+  --color-chrome-100: #f2f5f7;
+  --color-chrome-500: #a9b4bc;
+  --color-chrome-700: #5c666e;
+  --color-gold: #c9a24b;
+  --color-gold-soft: #e8c97a;
+  --color-wine: #3a1418;
+
+  --font-display: "Unbounded", "Plus Jakarta Sans", sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+
+  --breakpoint-xs: 420px;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  border-color: rgba(243, 239, 230, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-void);
+}
+
+body {
+  margin: 0;
+  background: var(--color-void);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-void);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-void-lift);
+  border-radius: 999px;
+  border: 2px solid var(--color-void);
+}
+
+/* Fixed film-grain overlay — pointer-events-none, GPU-cheap (single fixed layer, no scroll repaint) */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+/* Chrome gradient text — echoes the antler-mark metal */
+.text-chrome {
+  background: linear-gradient(
+    180deg,
+    var(--color-chrome-100) 0%,
+    var(--color-chrome-500) 55%,
+    var(--color-chrome-700) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Cinematic letterbox bars */
+.letterbox::before,
+.letterbox::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: var(--color-void);
+  z-index: 10;
+  pointer-events: none;
+}
+.letterbox::before {
+  top: 0;
+  height: clamp(10px, 4vw, 40px);
+}
+.letterbox::after {
+  bottom: 0;
+  height: clamp(10px, 4vw, 40px);
+}
+
+.tracked-caps {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+.container-edge {
+  padding-left: clamp(1.25rem, 5vw, 5rem);
+  padding-right: clamp(1.25rem, 5vw, 5rem);
+}

@@ -24,7 +24,7 @@ export const services = [
   {
     n: "01",
     title: "Videos Musicales",
-    desc: "Producción integral para lanzamientos — de la idea al video oficial, con dirección de arte propia.",
+    desc: "Producción integral para lanzamientos, de la idea al video oficial, con dirección de arte propia.",
   },
   {
     n: "02",
@@ -34,7 +34,7 @@ export const services = [
   {
     n: "03",
     title: "Bodas de Cine",
-    desc: "Cobertura cinematográfica de bodas — el mismo lenguaje visual de nuestros videoclips, para el día más importante.",
+    desc: "Cobertura cinematográfica de bodas: el mismo lenguaje visual de nuestros videoclips, para el día más importante.",
   },
   {
     n: "04",
@@ -76,7 +76,7 @@ export const showcase = [
     id: "duckzy",
     kind: "photo",
     src: "/media/photo-duckzy-release.jpg",
-    title: "Duckzy — “Mi otro yo”",
+    title: "Duckzy · “Mi otro yo”",
     subtitle: "Arte de lanzamiento",
     size: "sm",
   },
@@ -141,7 +141,7 @@ export const featured = [
   {
     id: "amanecimos",
     eyebrow: "Videoclip",
-    title: "Kiddye & KAPAC — “Amanecimos”",
+    title: "Kiddye & KAPAC · “Amanecimos”",
     copy: "Un visualizer oficial filmado y dirigido por el equipo ALCE. Dirección, cámara y edición propias, de guion a estreno.",
     credit: "Dirección KingCastrou · Cámara Flaco · A Film By Alce",
     video: "/media/feature-amanecimos.mp4",
@@ -152,7 +152,7 @@ export const featured = [
     id: "jarulay",
     eyebrow: "Videoclip",
     title: "ja_rulay × Planet Records",
-    copy: "“Siempre pa’ delante” — Cuba y México en la misma producción. Gracias a Planet Records por confiar en nosotros para este proyecto.",
+    copy: "“Siempre pa’ delante”: Cuba y México en la misma producción. Gracias a Planet Records por confiar en nosotros para este proyecto.",
     credit: "Producción musical · Planet Records",
     video: "/media/feature-jarulay.mp4",
     poster: "/media/feature-jarulay-poster.jpg",

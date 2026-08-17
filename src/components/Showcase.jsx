@@ -15,7 +15,7 @@ export default function Showcase() {
           </Reveal>
         </div>
         <Reveal delay={0.1} className="max-w-xs text-sm text-muted">
-          Directo del feed — pasa el cursor (o toca en móvil) para reproducir.
+          Directo del feed: pasa el cursor (o toca en móvil) para reproducir.
         </Reveal>
       </div>
 

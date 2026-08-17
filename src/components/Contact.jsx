@@ -25,7 +25,7 @@ export default function Contact() {
           delay={0.1}
           className="mt-6 max-w-md text-base text-muted sm:text-lg"
         >
-          Videos musicales, comerciales, bodas o contenido de marca —
+          Videos musicales, comerciales, bodas o contenido de marca:
           hablemos de tu proyecto.
         </Reveal>
 

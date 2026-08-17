@@ -71,7 +71,7 @@ export default function Hero() {
 
       <div className="container-edge relative z-20 flex flex-col items-center text-center">
         <img
-          src="/media/alce-icon.png"
+          src="/media/alce-icon-transparent.png"
           alt="ALCE STUDIOS"
           className="hero-icon mb-6 h-16 w-auto sm:h-20"
         />

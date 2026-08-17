@@ -11,7 +11,7 @@ export default function Contact() {
 
       <div className="container-edge relative flex flex-col items-center text-center">
         <img
-          src="/media/alce-icon.png"
+          src="/media/alce-icon-transparent.png"
           alt=""
           className="mb-8 h-14 w-auto opacity-90"
         />

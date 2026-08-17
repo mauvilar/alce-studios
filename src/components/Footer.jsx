@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="container-edge flex flex-col items-center gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
       <div className="flex items-center gap-2">
-        <img src="/media/alce-icon.png" alt="" className="h-5 w-auto opacity-80" />
+        <img src="/media/alce-icon-transparent.png" alt="" className="h-5 w-auto opacity-80" />
         <span className="tracked-caps text-[10px] text-muted">
           © {year} ALCE STUDIOS
         </span>

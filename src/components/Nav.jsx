@@ -36,7 +36,7 @@ export default function Nav() {
         >
           <a href="#top" className="flex items-center gap-2 pl-1">
             <img
-              src="/media/alce-icon.png"
+              src="/media/alce-icon-transparent.png"
               alt=""
               className="h-7 w-7 object-contain"
             />

@@ -1,13 +1,17 @@
 import Reveal from "./Reveal";
+import LottieIcon from "./LottieIcon";
 import { stats } from "../content";
 
 export default function Intro() {
   return (
     <section className="container-edge relative py-24 sm:py-32 lg:py-40">
       <div className="mx-auto max-w-4xl">
-        <Reveal as="span" className="tracked-caps mb-6 inline-block rounded-full border border-paper/15 px-3 py-1 text-[10px] text-gold">
-          Quiénes somos
-        </Reveal>
+        <div className="mb-6 flex items-center gap-3">
+          <LottieIcon src="/lottie/camera.json" className="h-7 w-7 shrink-0" />
+          <Reveal as="span" className="tracked-caps inline-block rounded-full border border-paper/15 px-3 py-1 text-[10px] text-gold">
+            Quiénes somos
+          </Reveal>
+        </div>
 
         <Reveal
           as="p"

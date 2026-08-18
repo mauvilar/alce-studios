@@ -1,12 +1,16 @@
 import Reveal from "./Reveal";
+import LottieIcon from "./LottieIcon";
 import { services } from "../content";
 
 export default function Services() {
   return (
     <section id="servicios" className="container-edge py-24 sm:py-32">
-      <Reveal as="span" className="tracked-caps mb-4 inline-block text-[10px] text-gold">
-        Servicios
-      </Reveal>
+      <div className="mb-4 flex items-center gap-3">
+        <LottieIcon src="/lottie/camera.json" className="h-7 w-7 shrink-0" />
+        <Reveal as="span" className="tracked-caps inline-block text-[10px] text-gold">
+          Servicios
+        </Reveal>
+      </div>
       <Reveal as="h2" delay={0.06} className="max-w-lg font-display text-4xl text-paper sm:text-5xl">
         De la idea al estreno
       </Reveal>
